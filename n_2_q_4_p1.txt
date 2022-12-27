@@ -1,0 +1,213 @@
+clear;
+M := ZeroMatrix(IntegerRing(), 500, 7);
+S1 := Matrix(IntegerRing(), 1, 3, [1,12,15]);
+S2 := Matrix(IntegerRing(), 1, 3, [2,13,1]);
+S3 := Matrix(IntegerRing(), 1, 3, [3,14,2]);
+S4 := Matrix(IntegerRing(), 1, 3, [4,15,3]);
+S5 := Matrix(IntegerRing(), 1, 3, [5,1,4]);
+S6 := Matrix(IntegerRing(), 1, 3, [6,2,5]);
+S7 := Matrix(IntegerRing(), 1, 3, [7,3,6]);
+S8 := Matrix(IntegerRing(), 1, 3, [8,4,7]);
+S9 := Matrix(IntegerRing(), 1, 3, [9,5,8]);
+S10 := Matrix(IntegerRing(), 1, 3, [10,6,9]);
+S11 := Matrix(IntegerRing(), 1, 3, [11,7,10]);
+S12 := Matrix(IntegerRing(), 1, 3, [12,8,11]);
+S13 := Matrix(IntegerRing(), 1, 3, [13,9,12]);
+S14 := Matrix(IntegerRing(), 1, 3, [14,10,13]);
+S15 := Matrix(IntegerRing(), 1, 3, [15,11,14]);
+T := ZeroMatrix(IntegerRing(), 100, 7);
+
+A := ZeroMatrix(IntegerRing(), 1, 15);
+
+i:= 0;
+    
+    for r1 := 1 to 3 do
+        A[1][1] := S1[1][r1];
+
+        for r2 := 1 to 3 do
+            v := 0;
+            for i2 := 1 to 1 do
+                if S2[1][r2] eq A[1][i2] then
+                    v := v+1;
+                end if;
+           end for;    
+           if v eq 0 then
+               A[1][2] := S2[1][r2];
+	   else continue;
+           end if;
+    
+           for r3 := 1 to 3 do
+               v := 0;
+               for i3 := 1 to 2 do
+                   if S3[1][r3] eq A[1][i3] then
+                       v := v+1;
+                   end if;
+               end for;
+               if v eq 0 then
+                   A[1][3] := S3[1][r3];
+	   else continue;
+               end if;
+
+               for r4 := 1 to 3 do
+                       v := 0;
+                   for i4 := 1 to 3 do
+                       if S4[1][r4] eq A[1][i4] then
+                           v := v+1;
+                       end if;
+                   end for;
+                   if v eq 0 then
+                       A[1][4] := S4[1][r4];
+	   else continue;
+                   end if;
+
+                   for r5 := 1 to 3 do
+                           v := 0;
+                       for i5 := 1 to 4 do
+                           if S5[1][r5] eq A[1][i5] then
+                               v := v+1;
+                           end if;
+                       end for;
+                       if v eq 0 then
+                           A[1][5] := S5[1][r5];
+	   else continue;
+                       end if;
+
+                       for r6 := 1 to 3 do
+                               v := 0;
+                           for i6 := 1 to 5 do
+                               if S6[1][r6] eq A[1][i6] then
+                                   v := v+1;
+                               end if;
+                           end for;
+                           if v eq 0 then
+                               A[1][6] := S6[1][r6];
+	   else continue;
+                           end if;
+
+                           for r7 := 1 to 3 do
+                                   v := 0;
+                               for i7 := 1 to 6 do
+                                   if S7[1][r7] eq A[1][i7] then
+                                       v := v+1;
+                                   end if;
+                               end for;
+                               if v eq 0 then
+                                   A[1][7] := S7[1][r7];
+	   else continue;
+                               end if;
+                   for r8 := 1 to 3 do
+                           v := 0;
+                       for i8 := 1 to 7 do
+                           if S8[1][r8] eq A[1][i8] then
+                               v := v+1;
+                           end if;
+                       end for;
+                       if v eq 0 then
+                           A[1][8] := S8[1][r8];
+	   else continue;
+                       end if;
+                   for r9 := 1 to 3 do
+                           v := 0;
+                       for i9 := 1 to 8 do
+                           if S9[1][r9] eq A[1][i9] then
+                               v := v+1;
+                           end if;
+                       end for;
+                       if v eq 0 then
+                           A[1][9] := S9[1][r9];
+	   else continue;
+                       end if;
+                   for r10 := 1 to 3 do
+                           v := 0;
+                       for i10 := 1 to 9 do
+                           if S10[1][r10] eq A[1][i10] then
+                               v := v+1;
+                           end if;
+                       end for;
+                       if v eq 0 then
+                           A[1][10] := S10[1][r10];
+	   else continue;
+                       end if;
+                   for r11 := 1 to 3 do
+                           v := 0;
+                       for i11 := 1 to 10 do
+                           if S11[1][r11] eq A[1][i11] then
+                               v := v+1;
+                           end if;
+                       end for;
+                       if v eq 0 then
+                           A[1][11] := S11[1][r11];
+	   else continue;
+                       end if;
+                   for r12 := 1 to 3 do
+                           v := 0;
+                       for i12 := 1 to 11 do
+                           if S12[1][r12] eq A[1][i12] then
+                               v := v+1;
+                           end if;
+                       end for;
+                       if v eq 0 then
+                           A[1][12] := S12[1][r12];
+	   else continue;
+                       end if;
+                   for r13 := 1 to 3 do
+                           v := 0;
+                       for i13 := 1 to 12 do
+                           if S13[1][r13] eq A[1][i13] then
+                               v := v+1;
+                           end if;
+                       end for;
+                       if v eq 0 then
+                           A[1][13] := S13[1][r13];
+	   else continue;
+                       end if;
+                   for r14 := 1 to 3 do
+                           v := 0;
+                       for i14 := 1 to 13 do
+                           if S14[1][r14] eq A[1][i14] then
+                               v := v+1;
+                           end if;
+                       end for;
+                       if v eq 0 then
+                           A[1][14] := S14[1][r14];
+	   else continue;
+                       end if;
+                   for r15 := 1 to 3 do
+                           v := 0;
+                       for i15 := 1 to 14 do
+                           if S15[1][r15] eq A[1][i15] then
+                               v := v+1;
+                           end if;
+                       end for;
+                       if v eq 0 then
+                           A[1][15] := S15[1][r15];
+	   else continue;
+                       end if;
+
+i := i+1;
+A;
+                           end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+end for;
+
+ 
+                      end for;
+
+     
+
+            end for;
+
+               end for;
+
+       	end for;
+
+     end for;
+
+  end for;
+i;
